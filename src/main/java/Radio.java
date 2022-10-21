@@ -33,12 +33,26 @@ public class Radio {
             currentStation = 0;
         }
     }
-
     public void prev() {
-        if (currentStation >0) {
+        if (currentStation > 0) {
             currentStation--;
-        } else {
+            return;
+        }
+        if (currentStation == 0) {
             currentStation = 9;
+        }
+    }
+
+    public void prevV() {
+        if (currentVolume > 0) {
+            currentVolume--;
+            return;
+        }
+    }
+    public void nextV() {
+        if (currentVolume < 9) {
+            currentVolume++;
+            return;
         }
     }
 }
