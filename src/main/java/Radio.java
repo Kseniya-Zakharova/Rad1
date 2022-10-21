@@ -27,7 +27,9 @@ public class Radio {
     public void next() {
         if (currentStation < 9) {
             currentStation++;
-        } else {
+            return;
+        }
+        if (currentStation == 9) {
             currentStation = 0;
         }
     }
